@@ -1,7 +1,28 @@
 // 配列とmap関数を使ってゲームリストを表示
-const games = ['アクションPVP', 'オープンワールドPVE', 'シミュレーション'];
+// ゲーム情報をジャンルごとに整理
+const gameCategories = [
+    {
+        genre: 'PVP',
+        titles: ['Leage of Legends', 'オーバーウォッチ２']
+    },
+    {
+        genre: 'PVE',
+        titles: ['エルデンリング', 'モンスターハンター']
+    },
+    {
+        genre: 'その他',
+        titles: ['ストリートファイター６', 'ゼンレスゾーンゼロ']
+    }
+];
 
 const listElement = document.getElementById('game-list');
-listElement.innerHTML = games.map(game => `<li>${game}</li>`).join('');
 
-console.log("Webページが読み込まれました");
+// 二重のmap関数を使って、ジャンルとその中のタイトルを組み立てる
+listElement.innerHTML = gameCategories.map(cat => `
+    <li style="margin-bottom: 15px; list-style: none;">
+        <strong>【${cat.genre}】</strong>
+        <ul style="list-style: disc; margin-left: 20px;">
+            ${cat.titles.map(title => `<li>${title}</li>`).join('')}
+        </ul>
+    </li>
+`).join('');

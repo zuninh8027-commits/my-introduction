@@ -1,14 +1,59 @@
+/* 全体の設定：黒基調に変更 */
 body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-}
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-ul {
-    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; /* 真っ黒すぎない暗いグレー */
+    color: #e0e0e0;           /* 文字は読みやすい薄いグレー */
+    margin: 0;
     padding: 0;
+    line-height: 1.4;         /* 行間を少し詰める */
+}
+
+/* ヘッダー：余白を減らしてコンパクトに */
+header {
+    background-color: #000;
+    color: #00ff99;           /* ゲーミング感のあるネオングリーン */
+    padding: 10px 0;          /* 上下の余白を最小限に */
+    border-bottom: 2px solid #00ff99;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* メインコンテンツ：幅を絞って中央寄せ */
+main {
+    max-width: 600px;         /* 横幅を制限して密度を上げる */
+    margin: 0 auto;
+    padding: 15px;            /* 外側の余白を削減 */
+    text-align: left;         /* 左寄せにして情報をまとめやすく */
+}
+
+/* 各セクションの余白をカット */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-left: 4px solid #00ff99;
+    padding-left: 10px;
+    margin: 10px 0;           /* 上下の隙間を減らす */
+}
+
+/* ゲームリストのスタイル（JSのinnerHTMLと連動） */
+#game-list {
+    background-color: #262626; /* リスト部分を少し明るいグレーに */
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+/* JSで生成されるliタグのスタイルを上書き */
+#game-list li {
+    margin-bottom: 10px !important; /* JS側のスタイルより優先して隙間を詰める */
+}
+
+strong {
+    color: #00ff99;
 }
