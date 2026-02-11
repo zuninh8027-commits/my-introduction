@@ -1,11 +1,11 @@
-/* 全体の設定：黒基調に変更 */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a; /* 真っ黒すぎない暗いグレー */
-    color: #e0e0e0;           /* 文字は読みやすい薄いグレー */
+    font-family: 'DotGothic16', sans-serif; /* ここを書き換え */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    line-height: 1.4;         /* 行間を少し詰める */
+    line-height: 1.4;
 }
 
 /* ヘッダー：余白を減らしてコンパクトに */
